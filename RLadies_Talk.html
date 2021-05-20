@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>R Ladies Miami</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Nyssa Silbiger (Twitter: @NSilbiger)" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# R Ladies Miami
+## Rescuing Coral Reefs with Data Science and Art: Future Pacific
+### Dr. Nyssa Silbiger (Twitter: <span class="citation">@NSilbiger</span>)
+### California State University, Northridge
+### (updated: 2021-05-20)
+
+---
+
+
+
+
+
+---
+# Outline of discussion
+
+1. A little about me
+
+1. Open and reproducible science
+
+1. Open data science tools for coral reefs
+ 
+1. Using Art to communicate science
+
+1. How can we better merge data science with coral reef conservation?
+
+.center[
+&lt;img src="https://nyssasilbiger.com/x/cdn/?https://storage.googleapis.com/wzukusers/user-17206691/images/5633fbac5ab7cw4Pht3l/IMG_6638_600.JPG"&gt;
+]
+
+---
+# Me! Dr. Nyssa Silbiger 
+## Marine Ecologist, teacher, Rstats nerd...
+
+.pull-left[&lt;img src="http://www.hawaii.edu/news/wp-content/uploads/2016/04/manoa-soest-silbiger-n.jpg", width=50%&gt;  
+&lt;img src="https://csunshinetoday.csun.edu/wp-content/uploads/Nyssa-at-work-4-web.jpg", width=50%&gt;]
+
+.pull-right[&lt;img src="https://njsilbiger.github.io/images/NyssaMath.jpg", width=70%&gt;  
+&lt;img src="https://www.danapointtimes.com/wp-content/uploads/2017/02/IMG_3002-e1487872891337.jpg"/&gt;  
+]
+
+---
+# Me! Dr. Nyssa Silbiger 
+## Marine Ecologist, teacher, Rstats nerd...
+
+My research is focused on better understanding how anthropogenic stressors interact with the natural variability of the oceans and affect individual to ecosystem-level processes. 
+
+.center[
+&lt;img src="https://csunshinetoday.csun.edu/wp-content/uploads/Coral-Metabolism.jpg"&gt;
+]
+
+
+---
+## Open and reproducbile data science for coral reefs
+
+.center[
+*I firmly believe that an important step towards protecting coral reefs is to uphold reproducible data science practices and to share resources.*
+
+&lt;img src ="https://nyssasilbiger.com/x/cdn/?https://storage.googleapis.com/production-sitebuilder-v1-0-1/231/293231/6KnGbg0A/60cc490e00184fa58f1f05a57853ea77"&gt;]
+
+
+---
+
+# Reproducibility - what is it?
+
+--
+ 
+### “U.S. National Science Foundation (NSF) subcommittee on replicability in science: ‘reproducibility refers to the **ability of a researcher to duplicate the results of a prior study using the same materials as were used by the original investigator.'**”
+
+.center[
+&lt;img src="https://46gyn61z4i0t1u1pnq2bbk2e-wpengine.netdna-ssl.com/wp-content/uploads/2018/07/reproducibility-small.jpg", width=50% /&gt; 
+]
+.foot.note[Goodman et al., Science Translational Medicine  01 Jun 2016:
+Vol. 8, Issue 341, pp. 341ps12
+DOI: 10.1126/scitranslmed.aaf5027 
+]
+
+---
+# We are in a reproducibility crisis in science
+.center[
+![RepoCrisis](libs/Images/RepoCrisis.png)
+]
+.foot-note[Monya Baker (2016). 1500 scientists lift the lid on reproducibility. Nature 533 (7604).
+]
+
+---
+
+# Types of reproducibility
+
+.foot-note[From Victoria Stodden (as summarized in the ROpenSci Reproducibility Guide)] 
+
+“**Computational reproducibility**: when detailed information is provided about code, software, hardware and implementation details.”
+
+--
+
+“**Empirical reproducibility**: when detailed information is provided about non-computational empirical scientific experiments and observations. In practise this is enabled by making data freely available, as well as details of how the data was collected.”
+
+--
+
+“**Statistical reproducibility**: when detailed information is provided about the choice of statistical tests, model parameters, threshold values, etc. This mostly relates to pre-registration of study design to prevent p-value hacking and other manipulations.”
+
+---
+# Is this how you have been working?
+
+ ### If so, that's ok! Let's learn together.
+ 
+ ![ExcelWord](libs/Images/excelword.png)
+ 
+
+---
+# What about this workflow makes it hard to reproduce?
+
+ 
+ ![ExcelWord](libs/Images/excelword.png)
+ 
+---
+# A few areas for improvement
+
+--
+
+- No clear or organized history of what’s been done to the data from raw data through final figures/results  
+
+--
+
+- Lack of comments/annotation describing the steps  
+
+--
+
+- Tedious &amp; time consuming for a collaborator to recreate the analyses 
+
+--
+
+- Backed up w/version control? Probably not…  
+
+--
+
+- How do we transfer this into a final report or presentation? Is that reproducible?  
+
+
+---
+# Why does this matter?
+
+Say I’ve been **arrested for a murder** that was committed 6 months ago. My attorney says its very important to remember exactly what I did on the day of the murder to establish an alibi. I try my best to remember, and come up with this diagram describing my day: 
+
+.center[
+![arrested](libs/Images/arrested1.jpg)
+]
+.footnote[ modified from A Horst]
+
+
+---
+
+## My attorney is like “bummer...” 
+
+.center[
+&lt;img src="https://media.tenor.com/images/505870ffff0e7dbe9f13e4221b2c32dd/tenor.gif"/ with=125%&gt;
+]  
+
+
+---
+
+## I wrack my brain and come up with this order of things:
+
+.center[
+![arrested2](libs/Images/arrested2.jpg){width=30%}
+]
+
+.foot-note[Still not great...]
+
+.pull-right[.footnote[ modified from A Horst]]
+
+
+
+---
+
+
+## But then! I remember I had a datebook with all this information...
+
+
+![arrested3](libs/Images/arrested3.jpg)
+ .center[&lt;img src="https://media4.giphy.com/media/Xpj7V61MQ4wEQRub8c/giphy.gif"/, width=25%/&gt;]
+
+
+---
+# Do your **Data Sci** like it is going to need an **alibi**.
+
+![alibi](libs/Images/alibi.png)
+.pull-right[.footnote[ modified from A Horst]]
+
+
+
+---
+# With data that looks something like...
+
+ ![RepoData](libs/Images/repodata.png)
+ .pull-right[.footnote[ modified from A Horst]]
+
+
+
+---
+# Our goals for reproducible science
+
+![repo data 2](libs/Images/repodata2.png)
+
+
+---
+
+
+# Why open science is best science
+.center[
+&lt;img src="https://media.giphy.com/media/LqJALOD5Nqefb0JVQj/giphy.gif"/&gt;
+]
+
+
+---
+# Open Science
+
+.center[
+### *"Open science is not just about improving the way we share data and methods; it is also about improving the way we think, work and interact with each other. It’s about technology enabling social infrastructure that can promote inclusivity to create kinder science."*]
+
+.foot-note[[Open Software Means Kinder Science. By Julia Stewart Lowndes on December 10, 2019](https://blogs.scientificamerican.com/observations/open-software-means-kinder-science/)]
+
+---
+
+# Open Science
+
+## One scientist can only do so much  
+- More data = more Power
+
+--
+
+## Science must be reproducible  
+
+--
+
+## Who paid for this data collection? 
+- If on federal or state grant then the tax payers paid for your data  
+
+--
+
+## "Better and kinder science, done in less time and done together." - Julie Lowndes
+
+
+
+---
+# Why some people are scared....
+
+.pull-left[
+&lt;img src="https://64.media.tumblr.com/6e146340c3fba8b8ea096fa3e5d831c9/tumblr_o1dkk6vmAw1ul25n3o1_1280.jpg"/&gt;]
+
+.pull-right[
+&lt;img src="https://64.media.tumblr.com/78a7657c6f9f26a0d987270f11a83589/tumblr_inline_o1nbr5uz351s80q9m_540.jpg"/&gt;]
+
+.center[Work together, advance science, and don't waste time and money]
+
+---
+
+# Examples of #OpenScience in my lab
+
+[Silbiger Lab Github](https://github.com/silbigerlab)
+
+![Silbiger](libs/Images/silbigerlab.PNG){width=50%}
+---
+# Examples of coral reef data science
+
+### Mo'orea Long Term Ecological Research Site
+
+.center[
+&lt;img src="https://juliannarenzi.shinyapps.io/MCR_LTER_explore/_w_3df4bcd3/Moorea_map.png", width=40%&gt;
+]
+
+---
+# Examples of coral reef data science
+
+- **16 years of ecological data** on coral/macroalgal cover, invertebrate counts, environmental conditions, etc.  
+
+
+.pull-left[&lt;img src="https://cdn.shopify.com/s/files/1/0671/4129/articles/dc525ce3-6d24-4b67-9785-7d4277b28436_2048x2048_09cc1dca-7401-429c-bbae-8e5bf29d7c54_1024x1024.jpg?v=1536782060"/&gt;]  
+
+.pull-right[&lt;img src="https://media.eurekalert.org/multimedia_prod/pub/web/259335_web.jpg"/&gt;]
+
+---
+# Open science in Moorea
+
+- Cool shiny app made using RStats to *tidy* and visualize data (by student Julianna Arenzi from UC Santa Barbara)  
+[https://juliannarenzi.shinyapps.io/MCR_LTER_explore/](https://juliannarenzi.shinyapps.io/MCR_LTER_explore/)
+
+![](libs/Images/Shiny Moorea.PNG)
+---
+# Jupyter Lab notebooks for molecular data
+
+.center[
+[Putnam Lab](http://putnamlab.com/resources)
+
+&lt;img src="libs/Images/putnam.PNG", width=70%&gt;
+]
+
+---
+# Great Wiki for creating your own open lab notebook
+
+[https://github.com/Putnam-Lab/Lab_Management/wiki](https://github.com/Putnam-Lab/Lab_Management/wiki)
+
+![](libs/Images/PutnamManagement.PNG)
+---
+.center[
+## *Share data and code to advance coral reef research*
+
+&lt;img src="https://www.openscience-twente.com/.uc/i7f1977ca0102297c250178664302e07d3664bdcb98b00701c42602320280/74xcruuocf0lmjo5i-y8bq.gif"/&gt;]
+
+---
+# Merging art and science for coral reefs
+
+.center[
+## Future Pacific
+
+&lt;img src="https://images.squarespace-cdn.com/content/v1/5bd61150ebfc7f4a2b4247f3/1607387999900-S826ISD2SF23FO53RDZH/ke17ZwdGBToddI8pDm48kOaD2e8dx9ABzbAyRI3ihwZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UQF4sn_BNjf_S0hsQ3YiA0G6sWp1W5TVWiZLjwta0rE9wG3dwlhpSXXV9Hp3gq5RQg/5EC8E0AE-0924-4282-8E24-A419BFE5F08D.jpeg?format=300w"/&gt;
+]
+
+---
+# Future Pacific 
+
+&lt;img src="https://images.squarespace-cdn.com/content/v1/5bd61150ebfc7f4a2b4247f3/1621281831583-6QD702ZQ6RPU1D3MK2KX/ke17ZwdGBToddI8pDm48kFWxnDtCdRm2WA9rXcwtIYR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcTSrQkGwCGRqSxozz07hWZrYGYYH8sg4qn8Lpf9k1pYMHPsat2_S1jaQY3SwdyaXg/01_Shapiro.jpg?format=1000w"/&gt;
+
+---
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/mDFs5wA_9Uw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+
+---
+# Using AR to bring Future Pacific to you
+
+The the art installation was temporary, but data live on forever.
+
+&lt;video width="800" height="600" src="libs/Images/GoRecord5-20-2021.mov" controls &gt;&lt;/video&gt;
+
+---
+# Closing night is tomorrow in Miami
+
+&lt;video width="800" height="600" src="libs/Images/IMG-6344.mov" controls &gt;&lt;/video&gt;
+---
+### How can we use our knowledge of coding, open science, and broader outreach to protect coral reefs?
+
+.center[
+Breakout! Discuss ideas with your group for advancing these data science tools and share with us.
+
+&lt;img src = "https://s35691.pcdn.co/wp-content/uploads/2020/08/Enhancing-Student-Engagement-by-Integrating-Difficult-Discussions-of-COVID-19.jpg"/&gt;
+]
+---
+# Any questions?
+
+email: Nyssa.silbiger@csun.edu  
+twitter: @nsilbiger  
+instagram: @silbigerlab_csun  
+
+&lt;img src="https://nyssasilbiger.com/x/cdn/?https://storage.googleapis.com/wzukusers/user-17206691/images/5b11b69c64d76Mj5E0gk/Logo1_d400.jpg"/&gt;
+
+---
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+Some slides modified from Allison Horst, Jarret Byrnes
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
